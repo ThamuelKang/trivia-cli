@@ -49,4 +49,4 @@ export const triviaQuestions = [
         ],
         correctAnswer: "B. Mallards"
     }
-]
+];

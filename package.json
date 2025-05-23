@@ -19,5 +19,9 @@
     "commander": "^14.0.0",
     "inquirer": "^12.6.1",
     "log-update": "^6.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.27.0",
+    "globals": "^16.1.0"
   }
 }

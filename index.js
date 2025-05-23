@@ -1,16 +1,14 @@
 #!/usr/bin/env node
-import { program } from 'commander'
-import inquirer from "inquirer"
-import chalk from "chalk"
-import chalkAnimation from "chalk-animation"
-import { triviaQuestions } from "./src/question.js"
-import logUpdate from 'log-update';
+import inquirer from "inquirer";
+import chalkAnimation from "chalk-animation";
+import { triviaQuestions } from "./src/question.js";
+// import logUpdate from 'log-update';
 
 
 // helper function that pauses with specified ms parameters
 function sleep(ms) {
     return new Promise(resolve => {
-        setTimeout(resolve, ms)
+        setTimeout(resolve, ms);
     });
 }
 
@@ -32,7 +30,7 @@ async function askQuestion(questions) {
         //     logUpdate(`⏳ Time left: ${secondsLeft--}s`);
         // }, 1000);
 
-        console.log('⏳ You have 10 seconds to answer!')
+        console.log('⏳ You have 10 seconds to answer!');
 
         // used promise race to "race" two promises together, whichever one fufills first, is the select promise
         const result = await Promise.race([
@@ -69,7 +67,7 @@ async function askQuestion(questions) {
     // Final verdict
 
     if (score >= 5) {
-        console.log(`\n Final score: ${score}! \n Wow! You r ducking smart!`)
+        console.log(`\n Final score: ${score}! \n Wow! You r ducking smart!`);
     } else {
         console.log(`\n🎯 Final score: ${score}`);
     }
